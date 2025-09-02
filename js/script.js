@@ -75,6 +75,7 @@ let filteredNumbers = numbers.filter(function(value) {
 });
 document.getElementById("filtered").innerHTML = "Filtered Array (Positive Values): " + filteredNumbers.join(", ");
 
+
 // 6. Write a JavaScript program using array map() method and return the square of array element.
 //  arr = [2, 5, 6, 3, 8, 9];
 
