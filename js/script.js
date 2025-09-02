@@ -45,30 +45,26 @@ numberElement.innerHTML += "Sum using forEach loop: " + sum1;
 
 // 3.Write a JavaScript program to print a maximum and minimum value of given array.(using function and logic)
 
-function findMinMax(arr) {
-    let min = arr[0];
-    let max = arr[0];
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] < min) {
-            min = arr[i];
-        }
-        if (arr[i] > max) {
-            max = arr[i];
-        }
+let array = [3,5,7,34,2,89,2,5,7,9];
+let max = array[0];
+let min = array[0];
+for (let i = 1; i < array.length; i++) {
+    if (array[i] > max) {
+        max = array[i];
     }
-    return { min, max };
+    if (array[i] < min) {
+        min = array[i];
+    }
 }
-
-let { min, max } = findMinMax(num);
-document.getElementById("maximum").innerHTML = "Maximum: " + max + "<br>Minimum: " + min; 
+document.getElementById("maximum").innerHTML = "Maximum: " + max + "<br>Minimum: " + min;
 
 // 4.Write a JavaScript program for convert all array element in ASCII value.
 
-let asciiElement = document.getElementById("ascii");
-let asciiValues = myColor.map(function(value) {
+let character = ["A","B","C","D","E"];
+let asciiValues = character.map(function(value) {
     return value.charCodeAt(0);
 });
-asciiElement.innerHTML = "ASCII Values: " + asciiValues.join(", ");
+document.getElementById("ascii").innerHTML = "ASCII Values :- " + asciiValues.join(", ");
 
 // 5.Write a JavaScript program for remove negative values using the filter array function.
 // numbers = [-23,-20,-17, -12, -5, 0, 1, 5, 12, 19, 20];
@@ -118,11 +114,10 @@ document.getElementById("longWords").innerHTML = "Words with 8 or more character
 // x = "A New Java Book";   
 //  output:-  "a new java book" , "A NEW JAVA BOOK"
 
-// const x = "A New Java Book";
-// const lower = x.toLowerCase();
-// const upper = x.toUpperCase();
-// document.getElementById("output").innerHTML = "Output for 'A New Java Book': " + lower + " , " + upper;
-const x = "A New Java Book"; 
+const x = "A New Java Book";
+const lower = x.toLowerCase();
+const upper = x.toUpperCase();
+document.getElementById("output").innerHTML = "Output for 'A New Java Book': " + lower + " , " + upper; 
 
 
 // 10. write a JavaScript program for array reverse.
@@ -141,7 +136,7 @@ document.querySelector(".searching").innerHTML += "Value " + (found ? "found" : 
 
 // 12. write a JavaScript program for print your name and write the no of total character.
 
-let name = "John Doe";
+let name = "Vinayak";
 document.getElementById("nameCh").innerHTML += "Name :- " + name + ", Total Characters :- " + name.length;
 
 // 13.  write a JavaScript program given this output using replace concept.
@@ -159,11 +154,11 @@ document.getElementById("nameReplace").innerHTML += "Input: " + input + "<br>Out
 
 let str = "Hire the top 1% freelance developers";
 let arr1 = str.split(" ");
-document.getElementById("nameArray").innerHTML += "Input: " + str + "<br>Output: " ;
+document.getElementById("nameArray").innerHTML += "Input: " + str + "<br>Output: " + arr1.slice(0,4).join(", ") + "<br>";
 
 // 15. write a JavaScript program convert for array to string.
 // Input:- ['5', 32, 'Daniel'];
 // Output: 5,32,Daniel
 
-// let arr2 = ['5', 32, 'Daniel'];
-// document.getElementById("change").innerHTML += "Input: " + JSON.stringify(arr2) + "<br>Output: " + arr2.join(",");
+let arr2 = ['5', 32, 'Daniel'];
+document.getElementById("change").innerHTML += "Input: " + arr2.toString() + "<br>Output: " + arr2.join(",");
